@@ -404,7 +404,8 @@ class AzureToken:
         :rtype set
         :return: set of scopes present in the token
         """
-        scopes = self.claims.get('roles')
+				scopes = self.claims.get('scp')
+
 
         if scopes is None:
             return set()
